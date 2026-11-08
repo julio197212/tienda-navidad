@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nohora Muñoz  | Muñequería Artesanal</title>
+  <meta name="description" content="Muñecos y creaciones artesanales navideñas hechos a mano con amor y dedicación.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo animado de copos de nieve -->
+  <div id="snow-container" aria-hidden="true"></div>
+
+  <!-- Barra superior de anuncios -->
+  <div class="top-announcement">
+    <span>✨ ¡Temporada Navideña Abierta! Envíos a todo el país y pedidos personalizados ✨</span>
+  </div>
+
+  <!-- Encabezado / Barra de Navegación -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="brand-logo">
+        <span class="logo-icon">🎄</span>
+        <div class="brand-text">
+          <span class="brand-title">Nohora Muñoz Creaciones</span>
+          <span class="brand-subtitle">Muñequería Artesanal</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#personalizados">Creamos tu Navidad</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="cart-btn" class="cart-trigger-btn" aria-label="Ver carrito">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-badge" id="cart-counter">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN 1: INICIO (HERO) -->
+  <section id="inicio" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⭐ Hecho 100% a Mano con Amor</div>
+      <h1 class="hero-title">LA MAGIA DE LA NAVIDAD ESTÁ EN LOS DETALLES</h1>
+      <p class="hero-subtitle">
+        Muñecos y creaciones artesanales que llenan tu hogar de alegría, amor y espíritu navideño.
+      </p>
+      <div class="hero-buttons">
+        <a href="#catalogo" class="btn btn-primary">EXPLORAR CATÁLOGO</a>
+        <a href="#catalogo" class="btn btn-outline">HACER MI PEDIDO</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: NUESTROS PRODUCTOS / CATÁLOGO -->
+  <section id="catalogo" class="catalog-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Colección 2026</span>
+        <h2 class="section-title">Nuestros Muñecos Artesanales</h2>
+        <p class="section-description">
+          Cada pieza es confeccionada artesanalmente con telas de alta calidad, acabados minuciosos y el auténtico espíritu de la Navidad.
+        </p>
+      </div>
+
+      <!-- Buscador y Filtros -->
+      <div class="catalog-controls">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Buscar por nombre (ej. Papá Noel, Reno...)" aria-label="Buscar producto">
+        </div>
+
+        <div class="category-filters" id="category-filters">
+          <!-- Botones inyectados por JavaScript -->
+        </div>
+      </div>
+
+      <!-- Cuadrícula de Productos -->
+      <div class="products-grid" id="products-grid">
+        <!-- Tarjetas inyectadas por JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: CREAMOS TU NAVIDAD (PERSONALIZADOS) -->
+  <section id="personalizados" class="custom-section">
+    <div class="container">
+      <div class="custom-box">
+        <div class="custom-content">
+          <span class="section-tag">Diseños Exclusivos</span>
+          <h2 class="section-title">Creamos tu Navidad</h2>
+          <p>
+            ¿Tienes en mente un personaje especial, el muñeco con los colores de tu árbol o una pareja personalizada para tu hogar? 
+            Nosotros lo elaboramos para ti.
+          </p>
+          <ul class="custom-perks">
+            <li>✨ Diseños a la medida en tamaño y vestuario.</li>
+            <li>✨ Materiales premium y acabados duraderos.</li>
+            <li>✨ Asesoría directa por WhatsApp con fotos del proceso.</li>
+          </ul>
+        </div>
+
+        <div class="custom-card-form">
+          <h3>Solicitar Diseño Personalizado</h3>
+          <form id="custom-doll-form">
+            <div class="form-group">
+              <label for="custom-name">Tu Nombre</label>
+              <input type="text" id="custom-name" placeholder="Ej. Julio César" required>
+            </div>
+            <div class="form-group">
+              <label for="custom-phone">Número de Teléfono / WhatsApp</label>
+              <input type="tel" id="custom-phone" placeholder="Ej. 300 123 4567" required>
+            </div>
+            <div class="form-group">
+              <label for="custom-description">Describe el muñeco que deseas</label>
+              <textarea id="custom-description" rows="3" placeholder="Tamaño aproximado, personaje, colores de preferencia..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              <span>SOLICITAR DISEÑO PERSONALIZADO</span> 💬
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: INFORMACIÓN Y CONTACTO -->
+  <section id="contacto" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hablemos</span>
+        <h2 class="section-title">Información y Contacto</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Ubicación</h3>
+          <p id="contact-location">Taller Artesanal Calle 4b bis # 51-37 - Bogotá, Colombia</p>
+          <small>Envíos seguros a nivel nacional</small>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">⏰</div>
+          <h3>Horario de Atención</h3>
+          <p>Lunes a Sábado: 8:00 AM - 7:00 PM</p>
+          <small>Temporada navideña: atención continua</small>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h3>WhatsApp y Redes</h3>
+          <p>WhatsApp: <strong id="contact-phone-display">3203515351</strong></p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <span>•</span>
+            <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-icon">🎄</span>
+        <span class="brand-title">NOHORA MUÑOZ  CREACIONES</span>
+        <p>Tradición, artesanía y magia en cada puntada.</p>
+      </div>
+      <p class="copyright">
+        &copy; 2026 La Navidad Mágica. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="#" id="floating-whatsapp" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <span>💬</span>
+  </a>
+
+  <!-- MODAL DE DETALLE DEL PRODUCTO -->
+  <div id="product-modal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modal-close">&times;</button>
+      <div class="modal-body" id="modal-product-content">
+        <!-- Contenido inyectado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL LATERAL: CARRITO Y FINALIZACIÓN DE PEDIDO -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <span>🛒 Tu Carrito Navideño</span>
+        <span id="drawer-item-count" class="badge-count">0 items</span>
+      </div>
+      <button id="cart-close-btn" class="drawer-close">&times;</button>
+    </div>
+
+    <!-- Lista de artículos -->
+    <div id="cart-items-container" class="cart-drawer-body">
+      <!-- Artículos del carrito -->
+    </div>
+
+    <!-- Formulario de Pedido para WhatsApp -->
+    <div id="checkout-section" class="checkout-section hidden">
+      <div class="checkout-header">
+        <h4>📋 Datos para tu Envío</h4>
+        <button type="button" id="back-to-cart-items-btn" class="link-btn">← Volver a productos</button>
+      </div>
+      <form id="order-form" class="checkout-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-name">Nombre completo *</label>
+            <input type="text" id="order-name" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label for="order-phone">Teléfono / WhatsApp *</label>
+            <input type="tel" id="order-phone" required placeholder="Tu celular">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-city">Ciudad / Municipio *</label>
+            <input type="text" id="order-city" required placeholder="Ej. Bogotá">
+          </div>
+          <div class="form-group">
+            <label for="order-address">Dirección de entrega *</label>
+            <input type="text" id="order-address" required placeholder="Calle, Carrera, Apto">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="order-delivery-method">Método de entrega *</label>
+            <select id="order-delivery-method" required>
+              <option value="Envío a domicilio nacional">Envío a domicilio nacional</option>
+              <option value="Recogida personal en taller">Recogida personal en taller</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="order-date">Fecha deseada de entrega</label>
+            <input type="date" id="order-date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="order-notes">Observaciones o notas especiales</label>
+          <textarea id="order-notes" rows="2" placeholder="Indicaciones para la entrega o detalles de los muñecos..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary full-width order-submit-btn">
+          <span>CONFIRMAR Y ENVIAR PEDIDO A WHATSAPP</span> 📲
+        </button>
+      </form>
+    </div>
+
+    <!-- Totales -->
+    <div class="cart-drawer-footer" id="cart-footer">
+      <div class="cart-total-row">
+        <span>Total a pagar:</span>
+        <strong id="cart-total-price">$0 COP</strong>
+      </div>
+      <button id="start-checkout-btn" class="btn btn-primary full-width">
+        FINALIZAR PEDIDO
+      </button>
+    </div>
+  </aside>
+
+  <!-- Notificación Toast -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
